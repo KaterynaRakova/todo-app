@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="cover.png" alt="ToDo App Cover" width="100%">
+</p>
 # 📝 ToDo Application
 
 A simple task management web application built with **Spring Boot**, **Thymeleaf**, and **Bootstrap**.  
