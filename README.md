@@ -17,6 +17,7 @@ Users can create, view, and delete personal tasks.
 - Responsive UI with Bootstrap 5
 
 ---
+💡 Styling is handled via Bootstrap 5 (CDN). No local CSS files required.
 
 ## 📦 Tech Stack
 

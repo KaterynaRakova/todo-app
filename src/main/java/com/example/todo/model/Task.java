@@ -5,6 +5,23 @@ import lombok.*;
 
 import java.time.LocalDate;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+public class Task {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String title;
+    @Column(length = 1000)
+    private String description;
+    private LocalDate dueDate;
+    private boolean completed;
+
+}
+/*
 @Entity
 public class Task {
 
@@ -64,27 +81,6 @@ public class Task {
         this.completed = completed;
     }
 }
+*/
 
-
-
- /*
-
-@Getter
-@Setter
-@NoArgsConstructor
-//@AllArgsConstructor
-@Entity
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String title;
-    @Column(length = 1000)
-    private String description;
-    //  private String dueDate;
-    private LocalDate dueDate;
-    private boolean completed;
-
-}
-  */
 

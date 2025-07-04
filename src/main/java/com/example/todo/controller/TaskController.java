@@ -16,28 +16,24 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    // Показать список задач
     @GetMapping
     public String listTasks(Model model) {
         model.addAttribute("tasks", taskService.getAllTasks());
         return "task_list";
     }
 
-    // Показать форму для новой задачи
     @GetMapping("/new")
     public String showTaskForm(Model model) {
         model.addAttribute("task", new Task());
         return "task_form";
     }
 
-    // Сохранить задачу
     @PostMapping
     public String saveTask(@ModelAttribute Task task) {
         taskService.saveTask(task);
         return "redirect:/tasks";
     }
 
-    // Удалить задачу
     @GetMapping("/delete/{id}")
     public String deleteTask(@PathVariable Long id) {
         taskService.deleteTask(id);
